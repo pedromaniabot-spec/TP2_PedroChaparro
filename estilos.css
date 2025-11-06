@@ -1,3 +1,5 @@
+/* estilos.css — versión corregida */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -6,10 +8,7 @@ body {
     padding: 0;
 }
 
-header h1 {
-    animation: aparecer 2s ease-in-out;
-}
-
+/* Header */
 header {
     background-color: #0078d7;
     color: white;
@@ -18,21 +17,35 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    transition: color 0.3s, transform 0.3s; 
+header h1 {
+    animation: aparecer 2s ease-in-out;
+    margin: 0 0 8px 0;
 }
 
+/* Navegación - contenedor */
 nav {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-bottom: 15px;
+    margin: 0.5rem 0 1rem 0;
 }
 
+/* Si usas <a> en vez de <button> */
+nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #0066cc, #0099ff);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.4s ease, color 0.25s;
+}
+
+/* Botones (estilo principal creativo) */
 button {
     background: linear-gradient(45deg, #0066cc, #0099ff);
     color: white;
@@ -46,20 +59,27 @@ button {
     transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.4s ease;
 }
 
-button:hover {
+/* Hover para ambos button y nav a */
+button:hover,
+nav a:hover {
     background: linear-gradient(45deg, #ffdf00, #ffb700);
     color: #222;
     transform: translateY(-4px) scale(1.05);
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
-button:active {
+/* Active / pressed */
+button:active,
+nav a:active {
     transform: scale(0.95);
     box-shadow: 0 3px 6px rgba(0,0,0,0.25);
 }
 
+/* Main y tarjetas */
 main {
     padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 section, article {
@@ -76,15 +96,16 @@ section:hover, article:hover {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-
+/* Footer */
 footer {
     background-color: #222;
     color: white;
     text-align: center;
     padding: 10px 0;
+    margin-top: 20px;
 }
 
-
+/* Animación de entrada */
 @keyframes aparecer {
     0% {
         opacity: 0;
@@ -96,23 +117,13 @@ footer {
     }
 }
 
-button {
-    background-color: #004a99;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 6px;
-    margin: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+/* Pequeña accesibilidad: foco visible */
+button:focus,
+nav a:focus {
+    outline: 3px solid rgba(0,150,255,0.25);
+    outline-offset: 3px;
 }
 
-button:hover {
-    background-color: #ffdf00;
-    color: #222;
-    transform: scale(1.1);
-}
 
 
 
