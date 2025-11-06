@@ -26,9 +26,36 @@ nav a {
     transition: color 0.3s, transform 0.3s; 
 }
 
-nav a:hover {
-    color: #ffdf00;
-    transform: scale(1.1); 
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: linear-gradient(45deg, #0066cc, #0099ff);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.4s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ffdf00, #ffb700);
+    color: #222;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
 }
 
 
@@ -87,3 +114,4 @@ button:hover {
     color: #222;
     transform: scale(1.1);
 }
+
