@@ -69,3 +69,21 @@ footer {
         transform: translateY(0);
     }
 }
+
+button {
+    background-color: #004a99;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #ffdf00;
+    color: #222;
+    transform: scale(1.1);
+}
